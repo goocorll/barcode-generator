@@ -2,10 +2,12 @@
 (function () {
   "use strict";
   angular.module("demo", ["ngBarcode"]).controller("DemoCtrl", [DemoCtrl]);
+  
   function DemoCtrl() {
-    this.textField = "Enter Your Data!";
+    this.textField = "Asset Tag#";
     this.barcodeInput = this.barcodeInput || this.textField;
     this.updateBarcode = updateBarcode;
+    
     function updateBarcode() {
       this.barcodeInput = this.textField;
     }
